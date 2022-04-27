@@ -1,7 +1,5 @@
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+ Criado por Edson, Vitor Hugo, Pedro Henrique, Lunna e Pedro Lucas
  */
 package view;
 
@@ -69,18 +67,18 @@ public class FormPEPN extends javax.swing.JFrame {
 
         lbcapital = new javax.swing.JLabel();
         txtCapital = new javax.swing.JTextField();
-        txtCliente = new javax.swing.JTextField();
+        txtTempo = new javax.swing.JTextField();
         lbcliente = new javax.swing.JLabel();
         lbendereco = new javax.swing.JLabel();
         jScrollPane2 = new javax.swing.JScrollPane();
         txtEndereco = new javax.swing.JTextArea();
+        txtCliente = new javax.swing.JTextField();
         lbJuros = new javax.swing.JLabel();
-        txtJuros = new javax.swing.JTextField();
         jLabel6 = new javax.swing.JLabel();
-        txtTempo = new javax.swing.JTextField();
         btnSalvar = new javax.swing.JButton();
         btnDeletar = new javax.swing.JButton();
         btnAtualizar = new javax.swing.JButton();
+        txtJuros = new javax.swing.JTextField();
         lbtel = new javax.swing.JLabel();
         txtTel = new javax.swing.JTextField();
         jScrollPane1 = new javax.swing.JScrollPane();
@@ -93,20 +91,8 @@ public class FormPEPN extends javax.swing.JFrame {
         lbcapital.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
         lbcapital.setText("Capital Inicial:");
         getContentPane().add(lbcapital, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 80, -1, -1));
-
-        txtCapital.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtCapitalActionPerformed(evt);
-            }
-        });
-        getContentPane().add(txtCapital, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 110, 160, -1));
-
-        txtCliente.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtClienteActionPerformed(evt);
-            }
-        });
-        getContentPane().add(txtCliente, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 170, 180, -1));
+        getContentPane().add(txtCapital, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 110, 180, -1));
+        getContentPane().add(txtTempo, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 170, 180, -1));
 
         lbcliente.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
         lbcliente.setText("Cliente:");
@@ -121,27 +107,15 @@ public class FormPEPN extends javax.swing.JFrame {
         jScrollPane2.setViewportView(txtEndereco);
 
         getContentPane().add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 230, 180, 60));
+        getContentPane().add(txtCliente, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 170, 180, -1));
 
         lbJuros.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
         lbJuros.setText("Juros:");
         getContentPane().add(lbJuros, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 80, -1, 20));
 
-        txtJuros.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtJurosActionPerformed(evt);
-            }
-        });
-        txtJuros.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyTyped(java.awt.event.KeyEvent evt) {
-                txtJurosKeyTyped(evt);
-            }
-        });
-        getContentPane().add(txtJuros, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 110, 210, 20));
-
         jLabel6.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
-        jLabel6.setText("Tempo a pagar (em dias):");
-        getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 140, 230, -1));
-        getContentPane().add(txtTempo, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 170, 160, 20));
+        jLabel6.setText("Tempo a pagar:");
+        getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 140, 210, -1));
 
         btnSalvar.setText("Salvar");
         btnSalvar.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
@@ -169,17 +143,12 @@ public class FormPEPN extends javax.swing.JFrame {
             }
         });
         getContentPane().add(btnAtualizar, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 220, 90, 40));
+        getContentPane().add(txtJuros, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 110, 180, -1));
 
         lbtel.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
         lbtel.setText("Tel:");
         getContentPane().add(lbtel, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 200, -1, -1));
-
-        txtTel.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtTelActionPerformed(evt);
-            }
-        });
-        getContentPane().add(txtTel, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 230, 160, -1));
+        getContentPane().add(txtTel, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 230, 180, -1));
 
         tbClientes.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
         tbClientes.setModel(new javax.swing.table.DefaultTableModel(
@@ -216,14 +185,6 @@ public class FormPEPN extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void txtJurosKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtJurosKeyTyped
-        
-    }//GEN-LAST:event_txtJurosKeyTyped
-
-    private void txtJurosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtJurosActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txtJurosActionPerformed
-
     private void btnSalvarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSalvarActionPerformed
         // TODO add your handling code here:
         SalvarAtualizar();  
@@ -236,7 +197,7 @@ public class FormPEPN extends javax.swing.JFrame {
         try {
             Deletar();
             limpardados();
-            AtualizacaoDoRegistroMedico();
+            AtualizacaoDoRegistro();
             btnDeletar.setEnabled(false);
             btnSalvar.setText("Salvar");
             dialog("Dado Deletado");
@@ -252,7 +213,7 @@ public class FormPEPN extends javax.swing.JFrame {
         btnDeletar.setEnabled(false);
         try {
             // btnSimpan.setText("Atualizar");
-            AtualizacaoDoRegistroMedico();
+            AtualizacaoDoRegistro();
             // TODO add your handling code here:
             // btnSimpan.setText("Atualizar");
         } catch (IOException ex) {
@@ -260,10 +221,6 @@ public class FormPEPN extends javax.swing.JFrame {
         }
 
     }//GEN-LAST:event_btnAtualizarActionPerformed
-
-    private void txtTelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtTelActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txtTelActionPerformed
 
     private void tbClientesMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tbClientesMouseClicked
     int click = tbClientes.rowAtPoint(evt.getPoint());
@@ -278,14 +235,6 @@ public class FormPEPN extends javax.swing.JFrame {
     // TODO add your handling code here:
 
     }//GEN-LAST:event_tbClientesMouseClicked
-
-    private void txtCapitalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtCapitalActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txtCapitalActionPerformed
-
-    private void txtClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtClienteActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txtClienteActionPerformed
 
     /**
      * @param args the command line arguments
@@ -384,7 +333,7 @@ private void mostrardados() {
 
     }
 
-private void AtualizacaoDoRegistroMedico() throws IOException {
+private void AtualizacaoDoRegistro() throws IOException {
         String ID, record2;
         File db = new File(pathFile);
         File tempDB = new File(pathFileTemp);
@@ -422,7 +371,7 @@ private void SalvarAtualizar(){
             }
         } else {
             try {
-                AtualizacaoDoRegistroMedico();
+                AtualizacaoDoRegistro();
                 limpardados();
                 mostrardados();
                 btnDeletar.setEnabled(false);
@@ -545,7 +494,7 @@ private void Deletar() throws IOException {
         BufferedWriter bw;
         try (BufferedReader br = new BufferedReader(new FileReader(db))) {
             bw = new BufferedWriter(new FileWriter(tempDB));
-            ID = "RM-"+txtCliente.getText();
+            ID = "RM-"+txtTempo.getText();
             while ((record = br.readLine()) != null) {
                 if (record.contains(ID)) {
                     continue;
